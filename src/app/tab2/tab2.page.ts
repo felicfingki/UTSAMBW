@@ -26,10 +26,6 @@ export class Tab2Page {
   {
     
   }
-  Detil(judul,waktu,tanggal,fotonote)
-  {
-    
-  }
 }
 
 interface data{
