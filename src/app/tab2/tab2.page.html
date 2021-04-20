@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>
       Tab 2
     </ion-title>
@@ -7,11 +10,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-item *ngFor="let data of isiData | async">
+    <br>
+    Judul : {{data.judulnote}}<br>
+    Waktu : {{data.waktunote}}<br>
+    Tanggal : {{data.tanggalnote}}<br>
+    Nama Foto : {{data.FotoNote}}<span></span>
+    <ion-button (click)="Detil(data.judulnote,data.waktunote,data.tanggalnote)">Detail</ion-button>
+    <br>
+  </ion-item>
 </ion-content>
